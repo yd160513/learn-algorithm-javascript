@@ -1,6 +1,7 @@
 /**
  * 快速排序
  * @param {array} list 无序数组
+ * 引用: https://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html
  * 
  * 核心是通过递归来实现
  * 1. 随便在数组中找一个基准值存起来，将基准值从数组中删除，然后遍历这个数组依次和基准值比较
