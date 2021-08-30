@@ -12,7 +12,8 @@
  */
  function test(list) {
   // 遍历 list 控制一共要循环多少轮，也就是有多少个元素，因为是从数组中的第二个元素去和其左侧的比较，所以 i 的初始值为 1
-  // 问: 这里的 i < list.length 为什么不能写成 list.length
+  // 问: 这里的 i < list.length 为什么不能写成 list.length - 1
+  // 答: 因为最后一个值还没有确定这里不能省去最后一个值的比较
   for (let i = 1; i < list.length; i++) {
     // 第一轮循环，将索引为 1 的值缓存，这个位置相当于空出来了。后续再循环的时候缓存的值就是上一个缓存的索引 + 1。
     const temp = list[i];
