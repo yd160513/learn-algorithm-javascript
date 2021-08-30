@@ -148,7 +148,8 @@
 //  */
 // function test(list) {
 //   // 遍历 list 控制一共要循环多少轮，也就是有多少个元素，因为是从数组中的第二个元素去和其左侧的比较，所以 i 的初始值为 1
-//   // 问: 这里的 i < list.length 为什么不能写成 list.length
+//   // 问: 这里的 i < list.length 为什么不能写成 list.length - 1
+//   // 答: 因为当写成 list.length - 1 就意味着最后一个元素是匹配不到的，但是这里最后一个元素是需要进行比较的。
 //   for (let i = 1; i < list.length; i++) {
 //     // 第一轮循环，将索引为 1 的值缓存，这个位置相当于空出来了。后续再循环的时候缓存的值就是上一个缓存的索引 + 1。
 //     const temp = list[i];
@@ -173,6 +174,27 @@
 // }
 // const arr = [2, 8, 4, 5, 9, 0, 1]
 // console.log(test(arr))
+// 
+// 插入排序的第二种实现方。
+// https://segmentfault.com/a/1190000015489767
+// function insertSort(arr) {
+//   let length = arr.length;
+//   for(let i = 1; i < length; i++) {
+//     let temp = arr[i];
+//     let index = i
+//     for(let j = i; j > 0; j--) {
+//       if(temp >= arr[j-1]) {
+//         break;
+//       }
+//       arr[j] = arr[j-1];
+//       index--
+//     }
+//     arr[index] = temp;
+//   }
+//   return arr;
+// }
+// const arr = [2, 8, 4, 5, 9, 0, 1]
+// console.log(insertSort(arr))
 
 // 快速排序 ---------------------------------------------------------------------------
 /**
