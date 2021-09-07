@@ -1,5 +1,5 @@
 /**
- * 选择排序
+ * 选择排序 时间复杂度: O(n方)
  * @param {array} list 无序数组
  * @returns list
  * 
